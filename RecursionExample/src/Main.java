@@ -9,15 +9,18 @@ public class Main {
         System.out.println("Fibonacci number: " + fibonacciWrapper(n));
     }
 
+    // Produces the factorial of the number n
     public static long factorial (long n) {
         if (n == 0) return 1;
         else return n * factorial(--n);
     }
 
+    // Wrapper function for fibonacci number function
     public static long fibonacciWrapper(long n) {
         return fibonacci(0, 1, n);
     }
-
+ 
+    // Produces the nth fibonacci number
     public static long fibonacci(long n0, long n1, long n) {
         if (n == 0)  return n0;
         else return fibonacci (n1, (n0 + n1), --n);
