@@ -86,7 +86,7 @@ public class Main {
 
         long[] solution = certificateOfCorrectness(tempX, tempY, tempQ, tempR);
 
-        if (c % solution[2] == 0) {
+        if (c % solution[2] == 0) { // We note that integer solutions of (x,y) to the equation ax+by=c exist if and only if gcd(a,b) divides c.
             output = "One solution to " + a + "x+" + b + "y=" + c + " is x = " + (solution[0] * c) + " y = " + (solution[1] * c);
         } else {
             output = "This particular linear Diophantine equation has no x,y integer solutions.";
